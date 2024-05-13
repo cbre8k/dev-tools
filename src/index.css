@@ -27,3 +27,7 @@ code {
 .bootstrap-select .form-control > div.filter-option > div.filter-option-inner > div.filter-option-inner-inner:focus {
   outline: 0px none #fff !important;
 }
+
+h3 {
+  text-align: center;
+}

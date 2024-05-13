@@ -8,7 +8,7 @@ const SideNav = () => {
     <div className="container">
       {ROUTES_BY_CATEGORY.map(({ routes, title }, i) => (
         <div key={i}>
-          {title && <h3 className={styles.title}>{title}</h3>}
+          {title && <h6 className={styles.title}>{title.toUpperCase()}</h6>}
           <ul className={styles.list}>
             {routes.map(({ path, title }) => (
               <li className={styles.listItem} key={path}>

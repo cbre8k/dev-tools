@@ -1,3 +1,4 @@
+import "./App.css"
 import React from "react";
 import SideNav from './components/SideNav';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
