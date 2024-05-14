@@ -11,10 +11,15 @@ textarea {
     font-size: 10px;
 }
 
+p {
+  font-size: 12px;
+}
+
 .btn {
     position: absolute;
-    right: 48px;
+    right: 47px;
     margin-top: 5px;
     border-radius: 5px;
     align-items: right;
+    font-size: 13px;
 }
