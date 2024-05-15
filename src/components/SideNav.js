@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ROUTES_BY_CATEGORY } from "../utils/SideNavItem";
 
 const SideNav = () => {
+  
   return (
     <div className="container">
       {ROUTES_BY_CATEGORY.map(({ routes, title }, i) => (

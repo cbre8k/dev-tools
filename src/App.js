@@ -6,6 +6,7 @@ import EthereumUnitConverter from "./page/EthereumUnitConverter";
 import EthereumAddressChecksum from "./page/EthereumAddressChecksum";
 import SolidityOptimizeName from "./page/SolidityOptimizeName";
 import EthereumInputDataDecoder from "./page/EthereumInputDataDecoder";
+import EthereumFunctionExtractor from "./page/EthereumFunctionExtractor";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
                 <Route path="/number/ethereum-unit-converter" element={<EthereumUnitConverter />} />
                 <Route path="/dev/ethereum-address-checksum" element={<EthereumAddressChecksum />} />
                 <Route path="/dev/solidity-optimize-name" element={<SolidityOptimizeName />} />
-                <Route path="dev/ethereum-input-data-decoder" element={<EthereumInputDataDecoder />} />
+                <Route path="/dev/ethereum-input-data-decoder" element={<EthereumInputDataDecoder />} />
+                <Route path="/dev/ethereum-function-extractor" element={<EthereumFunctionExtractor />} />
               </Routes>
             </div>
           </div>

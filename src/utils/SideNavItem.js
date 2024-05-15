@@ -19,6 +19,10 @@ export const ROUTES_BY_CATEGORY = [
         title: "Ethereum Address Checksum",
         path: "/dev/ethereum-address-checksum",
       },
+      {
+        title: "EVMole",
+        path: "/dev/ethereum-function-extractor",
+      },
       // {
       //   title: "Signature Database",
       //   path: "/dev/signature-database",
