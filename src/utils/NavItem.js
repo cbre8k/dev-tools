@@ -12,16 +12,16 @@ export const ROUTES_BY_CATEGORY = [
     title: "Dev",
     routes: [
       {
+        title: "Ethereum Function Extractor",
+        path: "/dev/ethereum-function-extractor",
+      },
+      {
         title: "Solidity Optimize Name",
         path: "/dev/solidity-optimize-name",
       },
       {
         title: "Ethereum Address Checksum",
         path: "/dev/ethereum-address-checksum",
-      },
-      {
-        title: "EVMole",
-        path: "/dev/ethereum-function-extractor",
       },
       // {
       //   title: "Signature Database",

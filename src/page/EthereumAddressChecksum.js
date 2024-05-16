@@ -1,7 +1,6 @@
-import styles from "./EthereumAddressChecksum.module.css";
 import React, { useState } from "react";
 import { toChecksumAddress } from "ethereum-checksum-address";
-import { Button, InputGroup, Form } from "react-bootstrap";
+import { Input, Space, Button, Row, Col } from 'antd';
 
 const EthereumAddressChecksum = () => {
   const [result, setResult] = useState("");
@@ -12,20 +11,20 @@ const EthereumAddressChecksum = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <Space direction="vertical" className="container">
       <h3>Ethereum Address Checksum</h3>
-      <hr/>
-      <InputGroup className="input-group input-group-sm mb-3">
-        <Form.Control
-          id="address"
-          aria-label="Address checksum"
-        />
-        <Button onClick={handleClick} className={styles.btn}>Checksum</Button>
-      </InputGroup>
-      <div className={styles.result}>
+      <Row gutter={16}>
+        <Col span={22}>
+          <Input id="address" className="input"/>
+        </Col>
+        <Col span={2}>
+          <Button type="primary" onClick={handleClick} >Optimize</Button>
+        </Col>
+      </Row>
+      <div>
         {result}
       </div>
-    </div>
+    </Space>
   )
 }
 

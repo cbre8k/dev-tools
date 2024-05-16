@@ -1,32 +1,9 @@
-.container {
-  margin-left: 0!important;
-  margin-right: 0!important;
-  width: 500px;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.btn {
-  border-radius: 5px 0px 0px 5px;
-  background-color: #e9ecef;
-  color: #495057;
-  border: 0px;
-}
-
-.btn:hover {
-  background-color: #e9ecef;
-  color: #495057;
-  border: 0px;
-}
-
-.btn:active, .btn:focus {
-  color: #e9ecef !important; 
-  background-color: #495057 !important; 
-  box-shadow: none !important;
-}
-
-.input-group-text {
-  width: 70px;
-  border-radius: 0px 5px 5px 0px;
-  border: 0px;
-  align-items: left;
-  font-size: 12px;
+.ant-input-group-addon {
+  width: 70px !important;
 }

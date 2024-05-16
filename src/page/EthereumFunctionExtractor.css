@@ -1,0 +1,21 @@
+.label {
+  margin: 0px 20px;
+  display: inline-block;
+  width: 80px;
+}
+
+.signature {
+  margin: 20px 0;
+}
+
+.evmole {
+  color: green;
+}
+
+.openchain {
+  color: blue
+}
+
+hr {
+  border: 0.5px dashed black;
+}

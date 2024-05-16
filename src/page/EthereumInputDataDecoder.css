@@ -1,0 +1,9 @@
+.t-area {
+  resize: none;
+  height: 400px;
+}
+
+p {
+  font-size: 11px;
+  text-decoration: underline;
+}

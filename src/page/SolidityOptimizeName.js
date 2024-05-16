@@ -1,7 +1,6 @@
 import { keccak256 } from "js-sha3";
 import React, { useState } from "react";
-import { Button, InputGroup, Form } from "react-bootstrap";
-import styles from "./SolidityOptimizeName.module.css";
+import { Input, Space, Button, Row, Col } from 'antd';
 
 const SolidityOptimizeName = () => {
   const [result, setResult] = useState("");
@@ -146,20 +145,20 @@ const SolidityOptimizeName = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <Space direction="vertical" className="container">
       <h3>Solidity Optimize Name</h3>
-      <hr />
-      <InputGroup className="input-group input-group-sm mb-3">
-        <Form.Control
-          id="name"
-          aria-label="Name"
-        />
-        <Button onClick={handleClick} className={styles.btn}>Optimize</Button>
-      </InputGroup>
-      <div className={styles.result}>
+      <Row gutter={16}>
+        <Col span={22}>
+          <Input id="name" className="input"/>
+        </Col>
+        <Col span={2}>
+          <Button type="primary" onClick={handleClick}>Optimize</Button>
+        </Col>
+      </Row>
+      <div>
         {result}
       </div>
-    </div>
+    </Space>
   );
 };
 

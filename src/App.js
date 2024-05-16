@@ -1,6 +1,9 @@
 import "./App.css"
 import React from "react";
-import SideNav from './components/SideNav';
+import { Layout } from "antd";
+import NavBar from "./components/NavBar";
+import SideBar from './components/SideBar';
+import { ConfigProvider } from 'antd';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import EthereumUnitConverter from "./page/EthereumUnitConverter";
 import EthereumAddressChecksum from "./page/EthereumAddressChecksum";
@@ -10,24 +13,29 @@ import EthereumFunctionExtractor from "./page/EthereumFunctionExtractor";
 
 function App() {
   return (
-    <div className="app">
-      <BrowserRouter>
-          <div className="row">
-            <div className="col-sm-3">
-              <SideNav />
-            </div>
-            <div className="col-sm-9">
-              <Routes>
-                <Route path="/number/ethereum-unit-converter" element={<EthereumUnitConverter />} />
-                <Route path="/dev/ethereum-address-checksum" element={<EthereumAddressChecksum />} />
-                <Route path="/dev/solidity-optimize-name" element={<SolidityOptimizeName />} />
-                <Route path="/dev/ethereum-input-data-decoder" element={<EthereumInputDataDecoder />} />
-                <Route path="/dev/ethereum-function-extractor" element={<EthereumFunctionExtractor />} />
-              </Routes>
-            </div>
-          </div>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <ConfigProvider
+        theme={{
+        token: {
+          colorPrimary: '#333333',
+          colorBgContainer: '#fff',
+        },
+      }}>
+        <NavBar />
+        <Layout>
+          <SideBar />
+          <Layout.Content className="content">
+            <Routes>
+              <Route path="/number/ethereum-unit-converter" element={<EthereumUnitConverter />} />
+              <Route path="/dev/ethereum-address-checksum" element={<EthereumAddressChecksum />} />
+              <Route path="/dev/solidity-optimize-name" element={<SolidityOptimizeName />} />
+              <Route path="/dev/ethereum-input-data-decoder" element={<EthereumInputDataDecoder />} />
+              <Route path="/dev/ethereum-function-extractor" element={<EthereumFunctionExtractor />} />
+            </Routes>
+          </Layout.Content>
+        </Layout>
+      </ConfigProvider>
+    </BrowserRouter>
   );
 }
 

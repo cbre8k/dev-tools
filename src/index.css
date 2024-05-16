@@ -4,30 +4,9 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0 300px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.bootstrap-select .form-control:focus {
-  outline: 0px none #fff !important;
-}
-
-.bootstrap-select .form-control > div.filter-option:focus {
-  outline: 0px none #fff !important;
-}
-
-.bootstrap-select .form-control > div.filter-option > div.filter-option-inner:focus {
-  outline: 0px none #fff !important;
-}
-
-.bootstrap-select .form-control > div.filter-option > div.filter-option-inner > div.filter-option-inner-inner:focus {
-  outline: 0px none #fff !important;
-}
-
-h3 {
-  text-align: center;
+.ant-layout {
+  background-color: #fff;
 }
