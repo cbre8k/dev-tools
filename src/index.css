@@ -10,3 +10,9 @@ body {
 .ant-layout {
   background-color: #fff;
 }
+
+@media screen and (max-width: 991px) {
+  body {
+    padding: 0;
+  }
+}
