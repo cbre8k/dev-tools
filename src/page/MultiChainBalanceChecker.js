@@ -68,9 +68,9 @@ const MultiChainBalanceChecker = () => {
           itemLayout="horizontal"
           dataSource={balances}
           renderItem={item => (
-            <List.Item>
+            <List.Item style={{margin: 0, padding: "4px 16px"}}>
               <List.Item.Meta
-                avatar={<Image preview={false} width={50} src={process.env.PUBLIC_URL + `/${item.key}.svg`} alt="..." />}
+                avatar={<Image preview={false} width={30} src={process.env.PUBLIC_URL + `/crypto-icons/${item.key}.svg` } style={{marginTop: "9px"}} alt="..." />}
                 title={<div className="name">{item.chain}</div>}
                 description={<div className="balance">{ethers.formatEther(item.balance)} {item.native}</div>}
               />
