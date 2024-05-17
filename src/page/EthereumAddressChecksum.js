@@ -14,10 +14,10 @@ const EthereumAddressChecksum = () => {
     <Space direction="vertical" className="container">
       <h3>Ethereum Address Checksum</h3>
       <Row gutter={16}>
-        <Col span={22}>
+        <Col span={18}>
           <Input id="address" className="input"/>
         </Col>
-        <Col span={2}>
+        <Col span={6}>
           <Button type="primary" onClick={handleClick} >Optimize</Button>
         </Col>
       </Row>

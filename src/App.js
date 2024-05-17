@@ -2,12 +2,15 @@ import "./App.css"
 import React from "react";
 import { Layout } from "antd";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import SideBar from './components/SideBar';
 import { ConfigProvider } from 'antd';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Home from "./page/Home";
+import SolidityOptimizeName from "./page/SolidityOptimizeName";
 import EthereumUnitConverter from "./page/EthereumUnitConverter";
 import EthereumAddressChecksum from "./page/EthereumAddressChecksum";
-import SolidityOptimizeName from "./page/SolidityOptimizeName";
 import EthereumInputDataDecoder from "./page/EthereumInputDataDecoder";
 import EthereumFunctionExtractor from "./page/EthereumFunctionExtractor";
 
@@ -26,6 +29,7 @@ function App() {
           <SideBar />
           <Layout.Content className="content">
             <Routes>
+              <Route path="/" element={<Home/>} />
               <Route path="/number/ethereum-unit-converter" element={<EthereumUnitConverter />} />
               <Route path="/dev/ethereum-address-checksum" element={<EthereumAddressChecksum />} />
               <Route path="/dev/solidity-optimize-name" element={<SolidityOptimizeName />} />
@@ -34,6 +38,7 @@ function App() {
             </Routes>
           </Layout.Content>
         </Layout>
+        <Footer/>
       </ConfigProvider>
     </BrowserRouter>
   );

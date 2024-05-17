@@ -1,13 +1,15 @@
 import axios from 'axios';
 import { Input, Space } from 'antd';
+import "./EthereumFunctionExtractor.css"
 import React, { useState, useEffect } from "react";
 import { functionArguments, functionSelectors } from "evmole";
-import "./EthereumFunctionExtractor.css"
+import { defaultBytecodeDeployed } from "../utils/data/defaultData";
 
 const EthereumFunctionExtractor = () => {
   const [res, setRes] = useState({});
-  const [bytecode, setBytecode] = useState("");
+  const [bytecode, setBytecode] = useState(defaultBytecodeDeployed);
   const { TextArea } = Input;
+
   useEffect(() => {
     const fetchData = async () => {
       const sigs = functionSelectors(bytecode).map((v) => `0x${v}`).sort();
@@ -25,13 +27,13 @@ const EthereumFunctionExtractor = () => {
   return (
     <Space direction="vertical" className="container">
       <h3>Ethereum Function Extractor</h3>
-      <TextArea onChange={(e) => setBytecode(e.target.value)} style={{ height: 120, width: "100%", resize: 'none' }} />
+      <TextArea defaultValue={defaultBytecodeDeployed} onChange={(e) => setBytecode(e.target.value)} style={{ height: 120, width: "100%", resize: 'none' }} />
       <div>
         {Object.keys(res).map((value, index) => {
           const args = functionArguments(bytecode, value.substr(2));
           const openchain = res[value] ? res[value][0].name : 'N/A';
           return (
-            <div className="signature">
+            <div className="signature" key={index} >
               <Space direction="horizontal">
                 {value}
                 <Space direction="vertical" className="lookup">

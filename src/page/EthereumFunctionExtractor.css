@@ -5,7 +5,7 @@
 }
 
 .signature {
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 .evmole {
@@ -17,5 +17,5 @@
 }
 
 hr {
-  border: 0.5px dashed black;
+  border: 0.5px dashed rgb(178, 178, 178);
 }

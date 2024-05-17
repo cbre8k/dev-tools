@@ -1,5 +1,5 @@
 .ant-layout {
-  height: calc(100vh - 64px);
+  height: calc(100vh - 98px);
 }
 
 .content {
@@ -9,10 +9,4 @@
 .container {
   width: 100%;
   padding: 0 40px;
-}
-
-@media screen and (max-width: 991px) {
-  .container {
-    width: 100%;
-  }
 }

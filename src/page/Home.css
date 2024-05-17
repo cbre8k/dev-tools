@@ -1,0 +1,9 @@
+.ant-image {
+  width: 600px;
+}
+
+@media screen and (max-width: 992px) {
+  .ant-image {
+    width: 80vw;
+  }
+}

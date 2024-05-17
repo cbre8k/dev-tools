@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import { Drawer, Button } from "antd";
 import React, { useState, useEffect } from "react";
-import { MenuOutlined } from "@ant-design/icons";
+import { MenuOutlined, FieldBinaryOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { ROUTES_BY_CATEGORY } from "../utils/NavItem";
 
@@ -11,7 +11,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setShowButton(window.innerWidth <= 991); // Adjust the threshold as needed
+      setShowButton(window.innerWidth <= 992); // Adjust the threshold as needed
     };
 
     handleResize(); // Call on initial render
@@ -22,13 +22,21 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      {showButton && ( // Conditionally render the button based on the screen size
+      <Link to="/">
+        <Button
+          className="home"
+          icon={<FieldBinaryOutlined />}
+        />
+      </Link>
+      
+      {showButton && ( 
         <Button
           className="menu"
           icon={<MenuOutlined />}
           onClick={() => setVisible(true)}
         />
       )}
+      
       <Drawer
         placement="left"
         onClick={() => setVisible(false)}

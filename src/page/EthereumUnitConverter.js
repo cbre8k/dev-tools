@@ -3,21 +3,10 @@ import React, { useState } from "react";
 import { Input, Space, Button } from 'antd';
 import converter from "ethereum-unit-converter";
 import { CopyOutlined } from "@ant-design/icons";
+import { defaultUnitValue } from "../utils/data/defaultData";
 
 const EthereumUnitConverter = () => {
-  const [values, setValues] = useState({
-    wei: "1000000000000000000",
-    kwei: "1000000000000000",
-    mwei: "1000000000000",
-    gwei: "1000000000",
-    szabo: "1000000",
-    finney: "1000",
-    ether: "1",
-    kether: "0.001",
-    mether: "0.000001",
-    gether: "0.000000001",
-    tether: "0.000000000001"
-    });
+  const [values, setValues] = useState(defaultUnitValue);
 
   const handleChange = (number, unit) => {
     const isValidNumber = !isNaN(parseFloat(number)) && isFinite(number);

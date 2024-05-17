@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-// import { Button } from "react-bootstrap";
-import InputDataDecoder from "ethereum-input-data-decoder";
-// import styles from "./EthereumInputDataDecoder.module.css";
-import { Input, Space, Button, Row, Col } from 'antd';
 import "./EthereumInputDataDecoder.css";
+import React, { useState } from "react";
+import InputDataDecoder from "ethereum-input-data-decoder";
+import { Input, Space, Button, Row, Col } from 'antd';
+import { defaultAbi, defaultInputData, defaultOutputData } from "../utils/data/defaultData";
 
 const EthereumInputDataDecoder = () => {
-  const [abi, setAbi] = useState("");
-  const [data, setData] = useState("");
-  const [output, setOutput] = useState("");
+  const [abi, setAbi] = useState(JSON.stringify(defaultAbi, null, 4));
+  const [data, setData] = useState(defaultInputData);
+  const [output, setOutput] = useState(JSON.stringify(defaultOutputData, null, 4));
   const {TextArea} = Input;
 
   const handleClick = () => {
