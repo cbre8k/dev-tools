@@ -5,6 +5,10 @@ export const ROUTES_BY_CATEGORY = [
       {
         title: "Ethereum Unit Converter",
         path: "/number/ethereum-unit-converter",
+      },
+      {
+        title: "Big Number Calculator",
+        path: "/",
       }
     ],
   },
@@ -26,6 +30,10 @@ export const ROUTES_BY_CATEGORY = [
       {
         title: "Ethereum Input Data Decoder",
         path: "/dev/ethereum-input-data-decoder",
+      },
+      {
+        title: "Foundry Test Generator",
+        path: "/"
       },
     ],
   },
