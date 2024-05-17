@@ -1933,10 +1933,22 @@
   dependencies:
     "@noble/hashes" "1.3.2"
 
+"@noble/curves@1.3.0", "@noble/curves@~1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@noble/curves/-/curves-1.3.0.tgz#01be46da4fd195822dab821e72f71bf4aeec635e"
+  integrity sha512-t01iSXPuN+Eqzb4eBX0S5oubSqXbK/xXa1Ne18Hj8f9pStxztHCE2gfboSp/dZRLSqfuLpRK2nDXDK+W9puocA==
+  dependencies:
+    "@noble/hashes" "1.3.3"
+
 "@noble/hashes@1.3.2":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@noble/hashes/-/hashes-1.3.2.tgz#6f26dbc8fbc7205873ce3cee2f690eba0d421b39"
   integrity sha512-MVC8EAQp7MvEcm30KWENFjgR+Mkmf+D189XJTkFIlwohU5hcBbn1ZkKq7KVTi2Hme3PMGF390DaL52beVrIihQ==
+
+"@noble/hashes@1.3.3", "@noble/hashes@~1.3.2":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@noble/hashes/-/hashes-1.3.3.tgz#39908da56a4adc270147bb07968bf3b16cfe1699"
+  integrity sha512-V7/fPHgl+jsVPXqqeOzT8egNj2iBIVt+ECeMMG8TdcnTikP3oaBtUVqpT/gYCR68aEBJSF+XbYUxStjbFMqIIA==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -2126,6 +2138,28 @@
     "@types/estree" "0.0.39"
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
+
+"@scure/base@~1.1.4":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@scure/base/-/base-1.1.6.tgz#8ce5d304b436e4c84f896e0550c83e4d88cb917d"
+  integrity sha512-ok9AWwhcgYuGG3Zfhyqg+zwl+Wn5uE+dwC0NV/2qQkx4dABbb/bx96vWu8NSj+BNjjSjno+JRYRjle1jV08k3g==
+
+"@scure/bip32@1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@scure/bip32/-/bip32-1.3.3.tgz#a9624991dc8767087c57999a5d79488f48eae6c8"
+  integrity sha512-LJaN3HwRbfQK0X1xFSi0Q9amqOgzQnnDngIt+ZlsBC3Bm7/nE7K0kwshZHyaru79yIVRv/e1mQAjZyuZG6jOFQ==
+  dependencies:
+    "@noble/curves" "~1.3.0"
+    "@noble/hashes" "~1.3.2"
+    "@scure/base" "~1.1.4"
+
+"@scure/bip39@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@scure/bip39/-/bip39-1.2.2.tgz#f3426813f4ced11a47489cbcf7294aa963966527"
+  integrity sha512-HYf9TUXG80beW+hGAt3TRM8wU6pQoYur9iNypTROm42dorCGmLnFe3eWjz3gOq6G62H2WRh0FCzAR1PI+29zIA==
+  dependencies:
+    "@noble/hashes" "~1.3.2"
+    "@scure/base" "~1.1.4"
 
 "@shazow/whatsabi@^0.11.0":
   version "0.11.0"
@@ -5927,6 +5961,16 @@ ethereum-checksum-address@^0.0.8:
     keccak "^3.0.2"
     meow "^10.1.2"
 
+ethereum-cryptography@^2.0.0:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/ethereum-cryptography/-/ethereum-cryptography-2.1.3.tgz#1352270ed3b339fe25af5ceeadcf1b9c8e30768a"
+  integrity sha512-BlwbIL7/P45W8FGW2r7LGuvoEZ+7PWsniMvQ4p5s2xCyw9tmaDlpfsN9HjAucbF+t/qpVHwZUisgfK24TCW8aA==
+  dependencies:
+    "@noble/curves" "1.3.0"
+    "@noble/hashes" "1.3.3"
+    "@scure/bip32" "1.3.3"
+    "@scure/bip39" "1.2.2"
+
 ethereum-input-data-decoder@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/ethereum-input-data-decoder/-/ethereum-input-data-decoder-0.4.2.tgz#d6a96f1e3233523fb31f9c47ff4659452e202373"
@@ -5983,7 +6027,7 @@ ethers@^5.5.4:
     "@ethersproject/web" "5.7.1"
     "@ethersproject/wordlists" "5.7.0"
 
-ethers@^6.10.0:
+ethers@^6.10.0, ethers@^6.12.1:
   version "6.12.1"
   resolved "https://registry.yarnpkg.com/ethers/-/ethers-6.12.1.tgz#517ff6d66d4fd5433e38e903051da3e57c87ff37"
   integrity sha512-j6wcVoZf06nqEcBbDWkKg8Fp895SS96dSnTCjiXT+8vt2o02raTn4Lo9ERUuIVU5bAjoPYeA+7ytQFexFmLuVw==
@@ -7226,7 +7270,7 @@ is-accessor-descriptor@^1.0.1:
   dependencies:
     hasown "^2.0.0"
 
-is-arguments@^1.1.1:
+is-arguments@^1.0.4, is-arguments@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/is-arguments/-/is-arguments-1.1.1.tgz"
   integrity sha512-8Q7EARjzEnKpt/PCD7e1cgUS0a6X8u5tdSiMqXhojOdoV9TsMsiO+9VLC5vAmO8N7/GmXn7yjR8qnA6bVAEzfA==
@@ -7415,7 +7459,7 @@ is-generator-fn@^2.0.0:
   resolved "https://registry.npmjs.org/is-generator-fn/-/is-generator-fn-2.1.0.tgz"
   integrity sha512-cTIB4yPYL/Grw0EaSzASzg6bBy9gqCofvWN8okThAYIxKJZC+udlRAmGbM0XLeniEJSs8uEgHPGuHSe1XsOLSQ==
 
-is-generator-function@^1.0.10:
+is-generator-function@^1.0.10, is-generator-function@^1.0.7:
   version "1.0.10"
   resolved "https://registry.npmjs.org/is-generator-function/-/is-generator-function-1.0.10.tgz"
   integrity sha512-jsEjy9l3yiXEQ+PsXdmBwEPcOxaXWLspKdplFUVI9vq1iZgIekeC0L167qeu86czQaxed3q/Uzuw0swL0irL8A==
@@ -7575,7 +7619,7 @@ is-symbol@^1.0.2, is-symbol@^1.0.3:
   dependencies:
     has-symbols "^1.0.2"
 
-is-typed-array@^1.1.13:
+is-typed-array@^1.1.13, is-typed-array@^1.1.3:
   version "1.1.13"
   resolved "https://registry.npmjs.org/is-typed-array/-/is-typed-array-1.1.13.tgz"
   integrity sha512-uZ25/bUAlUY5fR4OKT4rZQEBrzQWYV9ZJYGGsUmEJ6thodVJ1HX64ePQ6Z0qPWP+m+Uq6e9UugrE38jeYsDSMw==
@@ -13246,6 +13290,17 @@ util@^0.11.0:
   dependencies:
     inherits "2.0.3"
 
+util@^0.12.5:
+  version "0.12.5"
+  resolved "https://registry.yarnpkg.com/util/-/util-0.12.5.tgz#5f17a6059b73db61a875668781a1c2b136bd6fbc"
+  integrity sha512-kZf/K6hEIrWHI6XqOFUiiMa+79wE/D8Q+NCNAWclkyg3b4d2k7s0QGepNjiABc+aR3N1PAyHL7p6UcLY6LmrnA==
+  dependencies:
+    inherits "^2.0.3"
+    is-arguments "^1.0.4"
+    is-generator-function "^1.0.7"
+    is-typed-array "^1.1.3"
+    which-typed-array "^1.1.2"
+
 utila@~0.4:
   version "0.4.0"
   resolved "https://registry.npmjs.org/utila/-/utila-0.4.0.tgz"
@@ -13360,6 +13415,29 @@ web-vitals@^2.1.0:
   version "2.1.4"
   resolved "https://registry.npmjs.org/web-vitals/-/web-vitals-2.1.4.tgz"
   integrity sha512-sVWcwhU5mX6crfI5Vd2dC4qchyTqxV8URinzt25XqVh+bHEPGH4C3NPrNionCP7Obx59wrYEbNlw4Z8sjALzZg==
+
+web3-errors@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/web3-errors/-/web3-errors-1.1.4.tgz#5667a0a5f66fc936e101ef32032ccc1e8ca4d5a1"
+  integrity sha512-WahtszSqILez+83AxGecVroyZsMuuRT+KmQp4Si5P4Rnqbczno1k748PCrZTS1J4UCPmXMG2/Vt+0Bz2zwXkwQ==
+  dependencies:
+    web3-types "^1.3.1"
+
+web3-types@^1.3.1, web3-types@^1.5.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/web3-types/-/web3-types-1.6.0.tgz#ebe7f140c31f7cc0ad15f238ad7e7ac72797ff3b"
+  integrity sha512-qgOtADqlD5hw+KPKBUGaXAcdNLL0oh6qTeVgXwewCfbL/lG9R+/GrgMQB1gbTJ3cit8hMwtH8KX2Em6OwO0HRw==
+
+web3-validator@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/web3-validator/-/web3-validator-2.0.5.tgz#de1984bdb34f292251b86400dba7169700db0849"
+  integrity sha512-2gLOSW8XqEN5pw5jVUm20EB7A8SbQiekpAtiI0JBmCIV0a2rp97v8FgWY5E3UEqnw5WFfEqvcDVW92EyynDTyQ==
+  dependencies:
+    ethereum-cryptography "^2.0.0"
+    util "^0.12.5"
+    web3-errors "^1.1.4"
+    web3-types "^1.5.0"
+    zod "^3.21.4"
 
 webidl-conversions@^5.0.0:
   version "5.0.0"
@@ -13588,7 +13666,7 @@ which-module@^2.0.0:
   resolved "https://registry.npmjs.org/which-module/-/which-module-2.0.1.tgz"
   integrity sha512-iBdZ57RDvnOR9AGBhML2vFZf7h8vmBjhoaZqODJBFWHVtKkDmKuHai3cx5PgVMrX5YDNp27AofYbAwctSS+vhQ==
 
-which-typed-array@^1.1.13, which-typed-array@^1.1.14, which-typed-array@^1.1.15, which-typed-array@^1.1.9:
+which-typed-array@^1.1.13, which-typed-array@^1.1.14, which-typed-array@^1.1.15, which-typed-array@^1.1.2, which-typed-array@^1.1.9:
   version "1.1.15"
   resolved "https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.15.tgz"
   integrity sha512-oV0jmFtUky6CXfkqehVvBP/LSWJ2sy4vWMioiENyJLePrBO/yKyV9OyJySfAKosh+RYkIl5zJCNZ8/4JncrpdA==
@@ -13938,3 +14016,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zod@^3.21.4:
+  version "3.23.8"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.8.tgz#e37b957b5d52079769fb8097099b592f0ef4067d"
+  integrity sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==

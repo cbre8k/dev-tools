@@ -7,3 +7,9 @@ p {
   font-size: 11px;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 992px) {
+  .t-area {
+    height: 200px !important;
+  }
+}

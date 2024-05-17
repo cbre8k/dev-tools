@@ -40,6 +40,7 @@ const NavBar = () => {
         placement="left"
         onClick={() => setVisible(false)}
         onClose={() => setVisible(false)}
+        className="drawer"
         open={visible}   
       > 
         {ROUTES_BY_CATEGORY.map(({ routes, title }, i) => (

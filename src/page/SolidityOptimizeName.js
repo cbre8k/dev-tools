@@ -1,9 +1,9 @@
 import { keccak256 } from "js-sha3";
 import React, { useState } from "react";
-import { Input, Space, Button, Row, Col } from 'antd';
+import { Input, Space, Button, Row, Col, List } from 'antd';
 
 const SolidityOptimizeName = () => {
-  const [result, setResult] = useState("");
+  const [results, setResults] = useState([]);
 
   const CHARS = '0123456789abcdefghijklmnopqrstuvwxysABCDEFGHIJKLMNOPQRSTUVWXYS$_'.split('');
   const CHAR_MAP = {};
@@ -17,7 +17,7 @@ const SolidityOptimizeName = () => {
   });
 
   const data = { blocks: [], s: [] };
-  
+
   function save(hash) {
     data.reset = hash.reset;
     data.block = hash.block;
@@ -138,27 +138,38 @@ const SolidityOptimizeName = () => {
     const name = document.getElementById("name").value;
     const data = parseSignature(name);
     if (!data) {
-      setResult("Incorrect input");
+      setResults([...results, { id: Date.now(), value: "Incorrect input" }]);
       return;
     }
     let tempRs = find(data);
-    setResult(tempRs[0] + ": 0x" + tempRs[1]);
+    setResults([...results, { id: Date.now(), value: tempRs[0] + ": 0x" + tempRs[1] }]);
+  };
+
+  const handleRemove = (id) => {
+    setResults(results.filter(result => result.id !== id));
   };
 
   return (
     <Space direction="vertical" className="container">
       <h3>Solidity Optimize Name</h3>
-      <Row gutter={16}>
-        <Col span={18}>
+      <Row gutter={8}>
+        <Col span={16}>
           <Input id="name" className="input"/>
         </Col>
-        <Col span={6}>
-          <Button type="primary" onClick={handleClick}>Optimize</Button>
+        <Col span={8}>
+          <Button type="primary" onClick={handleClick} style={{ width: '100%' }}>Optimize</Button>
         </Col>
       </Row>
-      <div>
-        {result}
-      </div>
+      <List
+        className="history-result"
+        bordered
+        dataSource={results}
+        renderItem={item => (
+          <List.Item>
+            {item.value} <Button onClick={() => handleRemove(item.id)} type="link">Remove</Button>
+          </List.Item>
+        )}
+      />
     </Space>
   );
 };

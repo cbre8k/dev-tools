@@ -12,10 +12,6 @@ export const ROUTES_BY_CATEGORY = [
     title: "Dev",
     routes: [
       {
-        title: "Ethereum Function Extractor",
-        path: "/dev/ethereum-function-extractor",
-      },
-      {
         title: "Solidity Optimize Name",
         path: "/dev/solidity-optimize-name",
       },
@@ -23,18 +19,23 @@ export const ROUTES_BY_CATEGORY = [
         title: "Ethereum Address Checksum",
         path: "/dev/ethereum-address-checksum",
       },
-      // {
-      //   title: "Signature Database",
-      //   path: "/dev/signature-database",
-      // },
+      {
+        title: "Ethereum Function Extractor",
+        path: "/dev/ethereum-function-extractor",
+      },
       {
         title: "Ethereum Input Data Decoder",
         path: "/dev/ethereum-input-data-decoder",
       },
-      // {
-      //   title: "Function Selector & Arguments Extractor",
-      //   path: "/dev/function-selector-and-arguments-extractor",
-      // },
+    ],
+  },
+  {
+    title: "Utils",
+    routes: [
+      {
+        title: "Multi-chain Balance Checker",
+        path: "/utils/multi-chain-balance-checker",
+      },
     ],
   },
 ];

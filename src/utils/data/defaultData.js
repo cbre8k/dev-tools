@@ -1218,3 +1218,36 @@ export const defaultUnitValue = {
   gether: "0.000000001",
   tether: "0.000000000001"
 }
+
+export const chainSupport = {
+  "ether": {
+    "chainName": "Ethereum",
+    "native": "ETH",
+    "chainId": "1",
+    "rpcUrl": "https://eth.llamarpc.com",
+  },
+  "bsc": {
+    "chainName": "BNB Smart Chain",
+    "native": "BNB",
+    "chainId": "56",
+    "rpcUrl": "https://binance.llamarpc.com",
+  },
+  "polygon": {
+    "chainName": "Polygon",
+    "native": "MATIC",
+    "chainId": "137",
+    "rpcUrl": "https://polygon-pokt.nodies.app",
+  },
+  "arb": {
+    "chainName": "Arbitrum One",
+    "native": "ETH",
+    "chainId": "42161",
+    "rpcUrl": "https://arbitrum.llamarpc.com",
+  },
+  "avax": {
+    "chainName": "Avalanche",
+    "native": "AVAX",
+    "chainId": "43114",
+    "rpcUrl": "https://avalanche.drpc.org",
+  },
+}

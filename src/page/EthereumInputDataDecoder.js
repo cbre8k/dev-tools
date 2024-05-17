@@ -22,20 +22,20 @@ const EthereumInputDataDecoder = () => {
   return (
     <Space direction="vertical" className="container">
       <h3>Ethereum Input Data Decoder</h3>
-      <Row gutter={16}>
-        <Col span={8}>
+      <Row gutter={8}>
+        <Col lg={8} xs={24}>
           <p>Abi</p>
-          <TextArea id="abi" value={abi} onChange={(e) => setAbi(e.target.value)} style={{ height: 400, width: "100%", resize: 'none' }}></TextArea>
+          <TextArea className="t-area" id="abi" value={abi} onChange={(e) => setAbi(e.target.value)} style={{ height: 400, width: "100%", resize: 'none' }}></TextArea>
         </Col>
 
-        <Col span={8}>
+        <Col lg={8} xs={24}>
           <p>Data</p>
-          <TextArea id="data" value={data} onChange={(e) => setData(e.target.value)} style={{ height: 400, width: "100%", resize: 'none' }}></TextArea>
+          <TextArea className="t-area" id="data" value={data} onChange={(e) => setData(e.target.value)} style={{ height: 400, width: "100%", resize: 'none' }}></TextArea>
         </Col>
 
-        <Col span={8}>
+        <Col lg={8} xs={24}>
           <p>Output</p>
-          <TextArea id="output" value={output} readOnly style={{ height: 400, width: "100%", resize: 'none' }}></TextArea>
+          <TextArea className="t-area" id="output" value={output} readOnly style={{ height: 400, width: "100%", resize: 'none' }}></TextArea>
         </Col>
       </Row>
       <Button type="primary" onClick={handleClick}>Decode</Button>
