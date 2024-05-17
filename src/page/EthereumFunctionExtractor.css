@@ -4,6 +4,11 @@
   width: 80px;
 }
 
+.result {
+  overflow: auto;
+  max-height: calc(100vh - 286.25px);
+}
+
 .signature {
   margin: 5px 0;
 }

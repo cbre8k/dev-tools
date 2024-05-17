@@ -28,7 +28,7 @@ const EthereumFunctionExtractor = () => {
     <Space direction="vertical" className="container">
       <h3>Ethereum Function Extractor</h3>
       <TextArea defaultValue={defaultBytecodeDeployed} onChange={(e) => setBytecode(e.target.value)} style={{ height: 120, width: "100%", resize: 'none' }} />
-      <div>
+      <div className="result">
         {Object.keys(res).map((value, index) => {
           const args = functionArguments(bytecode, value.substr(2));
           const openchain = res[value] ? res[value][0].name : 'N/A';
