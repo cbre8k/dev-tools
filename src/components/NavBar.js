@@ -24,7 +24,6 @@ const NavBar = () => {
     <nav className="navbar">
       <Link to="/">
         <Button
-          className="home"
           icon={<FieldBinaryOutlined />}
         />
       </Link>

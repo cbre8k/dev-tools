@@ -1,3 +1,7 @@
+.home {
+  height: calc(100vh - 98px);
+}
+
 .ant-image {
   width: 600px;
 }
