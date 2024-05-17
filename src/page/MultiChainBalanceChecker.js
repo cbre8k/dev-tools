@@ -23,7 +23,6 @@ const MultiChainBalanceChecker = () => {
     const newBalances = [];
     for (const key in chainSupport) {
       const { chainName, rpcUrl, native } = chainSupport[key];
-      console.log(chainName + ": " + rpcUrl + "\n");
       const provider = new ethers.JsonRpcProvider(rpcUrl);
       try {
         const balance = await provider.getBalance(address);
@@ -31,7 +30,7 @@ const MultiChainBalanceChecker = () => {
           key: key,
           native: native,
           chain: chainName,
-          balance: ethers.utils.formatEther(balance),
+          balance: balance,
         });
       } catch (error) {
         newBalances.push({
@@ -73,7 +72,7 @@ const MultiChainBalanceChecker = () => {
               <List.Item.Meta
                 avatar={<Image preview={false} width={50} src={process.env.PUBLIC_URL + `/${item.key}.svg`} alt="..." />}
                 title={<div className="name">{item.chain}</div>}
-                description={<div className="balance">{item.balance} {item.native}</div>}
+                description={<div className="balance">{ethers.formatEther(item.balance)} {item.native}</div>}
               />
             </List.Item>
           )}
