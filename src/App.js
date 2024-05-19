@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import SideBar from './components/SideBar';
 
 import Home from "./page/Home";
+import BigNumberCalculator from "./page/BigNumberCalculator";
 import SolidityOptimizeName from "./page/SolidityOptimizeName";
 import EthereumUnitConverter from "./page/EthereumUnitConverter";
 import EthereumAddressChecksum from "./page/EthereumAddressChecksum";
@@ -34,7 +35,8 @@ function App() {
               <Route path="/" element={<Home/>} />
               
               <Route path="/number/ethereum-unit-converter" element={<EthereumUnitConverter />} />
-              
+              <Route path="/number/big-number-calculator" element={ <BigNumberCalculator/> } />
+
               <Route path="/dev/ethereum-address-checksum" element={<EthereumAddressChecksum />} />
               <Route path="/dev/solidity-optimize-name" element={<SolidityOptimizeName />} />
               <Route path="/dev/ethereum-input-data-decoder" element={<EthereumInputDataDecoder />} />

@@ -8,7 +8,7 @@ export const ROUTES_BY_CATEGORY = [
       },
       {
         title: "Big Number Calculator",
-        path: "/",
+        path: "/number/big-number-calculator",
       }
     ],
   },
@@ -30,10 +30,6 @@ export const ROUTES_BY_CATEGORY = [
       {
         title: "Ethereum Input Data Decoder",
         path: "/dev/ethereum-input-data-decoder",
-      },
-      {
-        title: "Foundry Test Generator",
-        path: "/"
       },
     ],
   },
