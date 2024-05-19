@@ -3,13 +3,13 @@ export const ROUTES_BY_CATEGORY = [
     title: "Number",
     routes: [
       {
+        title: "Big Number Calculator",
+        path: "/number/big-number-calculator",
+      },
+      {
         title: "Ethereum Unit Converter",
         path: "/number/ethereum-unit-converter",
       },
-      {
-        title: "Big Number Calculator",
-        path: "/number/big-number-calculator",
-      }
     ],
   },
   {
