@@ -51,8 +51,7 @@ const Calculator = () => {
         placeholder="Enter expression (e.g., (123+456)*2-789)"
       />
       <List
-        className="history-result"
-        style={{marginTop: "10px"}}      
+        className="history-result"    
         bordered
         dataSource={results}
         renderItem={item => (
