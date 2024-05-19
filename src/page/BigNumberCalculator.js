@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Input, List, Button } from 'antd';
+import { Input, List, Button, Space } from 'antd';
 import { infixToPostfix, evaluatePostfix } from '../utils/calculatorUtils';
 
 const Calculator = () => {
@@ -41,8 +41,8 @@ const Calculator = () => {
   };
 
   return (
-    <div>
-      <h1>Big Number Calculator</h1>
+      <Space direction="vertical" className="container">
+      <h3>Big Number Calculator</h3>
       <TextArea
         value={input}
         onChange={handleInputChange}
@@ -61,7 +61,7 @@ const Calculator = () => {
           </List.Item>
         )}
       />
-    </div>
+    </Space>
   );
 };
 
