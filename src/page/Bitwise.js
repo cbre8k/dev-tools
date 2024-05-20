@@ -52,11 +52,12 @@ const Bitwise = () => {
       const formattedResults = parsedInput.map(num => {
         const number = parseInt(num, 10);
         return (
-          <div>
-            <span className="decimal">{number}</span>
-            <span className="binary">{toBinary(number)}</span>
-            <span className="hex">{toHex(number)}</span>
-          </div>
+          <Row gutter={[8, 8]}>
+            <Col lg={2} xs={2} className="operator"></Col>
+            <Col lg={4} xs={6} className="decimal">{number}</Col>
+            <Col lg={10} xs={10} className="binary">{toBinary(number)}</Col>
+            <Col lg={8} xs={6} className="hex">{toHex(number)}</Col>
+          </Row>
         );
       });
 
@@ -128,23 +129,23 @@ const Bitwise = () => {
                 item.intermediateResults.map((line, index) => (
                   <div key={index}>
                     <Row gutter={[8, 8]}>
-                      <Col lg={4} xs={2} className="operator"></Col>
+                      <Col lg={2} xs={2} className="operator"></Col>
                       <Col lg={4} xs={6} className="decimal">{line.left}</Col>
-                      <Col lg={8} xs={8} className="binary">{toBinary(line.left)}</Col>
-                      <Col lg={8} xs={8} className="hex">{toHex(line.left)}</Col>
+                      <Col lg={10} xs={10} className="binary">{toBinary(line.left)}</Col>
+                      <Col lg={8} xs={6} className="hex">{toHex(line.left)}</Col>
                     </Row>
                     <Row gutter={[8, 8]}>
-                      <Col lg={4} xs={2} className="operator">{line.operator}</Col>
+                      <Col lg={2} xs={2} className="operator">{line.operator}</Col>
                       <Col lg={4} xs={6} className="decimal">{line.right}</Col>
-                      <Col lg={8} xs={8} className="binary">{toBinary(line.right)}</Col>
-                      <Col lg={8} xs={8} className="hex">{toHex(line.right)}</Col>
+                      <Col lg={10} xs={10} className="binary">{toBinary(line.right)}</Col>
+                      <Col lg={8} xs={6} className="hex">{toHex(line.right)}</Col>
                     </Row>
                     <hr/>
                     <Row gutter={[8, 8]}>
-                      <Col lg={4} xs={2} className="operator">=</Col>
+                      <Col lg={2} xs={2} className="operator">=</Col>
                       <Col lg={4} xs={6} className="decimal">{line.result}</Col>
-                      <Col lg={8} xs={8} className="binary">{toBinary(line.result)}</Col>
-                      <Col lg={8} xs={8} className="hex">{toHex(line.result)}</Col>
+                      <Col lg={10} xs={10} className="binary">{toBinary(line.result)}</Col>
+                      <Col lg={8} xs={6} className="hex">{toHex(line.result)}</Col>
                     </Row>
                   </div>
                 ))
