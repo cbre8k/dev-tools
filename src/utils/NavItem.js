@@ -3,6 +3,10 @@ export const ROUTES_BY_CATEGORY = [
     title: "Number",
     routes: [
       {
+        title: "Bitwise Calculator",
+        path: "/number/bitwise-calculator",
+      },
+      {
         title: "Big Number Calculator",
         path: "/number/big-number-calculator",
       },

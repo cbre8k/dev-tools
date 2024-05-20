@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import SideBar from './components/SideBar';
 
 import Home from "./page/Home";
+import Bitwise from "./page/Bitwise";
 import BigNumberCalculator from "./page/BigNumberCalculator";
 import SolidityOptimizeName from "./page/SolidityOptimizeName";
 import EthereumUnitConverter from "./page/EthereumUnitConverter";
@@ -34,6 +35,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home/>} />
               
+              <Route path="/number/bitwise-calculator" element={<Bitwise />} />
               <Route path="/number/ethereum-unit-converter" element={<EthereumUnitConverter />} />
               <Route path="/number/big-number-calculator" element={ <BigNumberCalculator/> } />
 

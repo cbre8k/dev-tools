@@ -1,0 +1,22 @@
+.bitwise-result {
+  width: 100%;
+  font-weight: 600;
+}
+
+.operator {
+  color: #641b00;
+}
+
+.binary {
+  color: #006400;
+}
+
+.hex {
+  color: #1A237E;
+}
+
+@media screen and (max-width: 400px) {
+  .bitwise-result, .operator, .decimal, .binary, .hex {
+    font-size: 10px;
+  }
+}
