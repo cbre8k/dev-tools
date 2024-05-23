@@ -20,8 +20,8 @@ export const ROUTES_BY_CATEGORY = [
     title: "Dev",
     routes: [
       {
-        title: "Solidity Optimize Name",
-        path: "/dev/solidity-optimize-name",
+        title: "Signature Recover",
+        path: "/dev/signature-recover",
       },
       {
         title: "Ethereum Address Checksum",
@@ -34,6 +34,10 @@ export const ROUTES_BY_CATEGORY = [
       {
         title: "Ethereum Input Data Decoder",
         path: "/dev/ethereum-input-data-decoder",
+      },
+      {
+        title: "Solidity Optimize Name",
+        path: "/dev/solidity-optimize-name",
       },
     ],
   },

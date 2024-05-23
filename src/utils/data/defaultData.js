@@ -1251,3 +1251,34 @@ export const chainSupport = {
     "rpcUrl": "https://avalanche.drpc.org",
   },
 }
+
+export const defaultDomain = {
+  name: 'My App',
+  version: '1',
+  chainId: 1,
+  verifyingContract: '0x1111111111111111111111111111111111111111'
+};
+
+export const defaultTypeHash = {
+  Mail: [
+    { name: 'from', type: 'Person' },
+    { name: 'to', type: 'Person' },
+    { name: 'content', type: 'string' }
+  ],
+  Person: [
+    { name: 'name', type: 'string' },
+    { name: 'wallet', type: 'address' }
+  ]
+};
+
+export const defaultValue = {
+  from: {
+     name: 'Alice',
+     wallet: '0x2111111111111111111111111111111111111111'
+  },
+  to: {
+     name: 'Bob',
+     wallet: '0x3111111111111111111111111111111111111111'
+  },
+  content: 'Hello!'
+};

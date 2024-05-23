@@ -10,6 +10,7 @@ import SideBar from './components/SideBar';
 
 import Home from "./page/Home";
 import Bitwise from "./page/Bitwise";
+import SignatureRecover from "./page/SignatureRecover";
 import BigNumberCalculator from "./page/BigNumberCalculator";
 import SolidityOptimizeName from "./page/SolidityOptimizeName";
 import EthereumUnitConverter from "./page/EthereumUnitConverter";
@@ -39,6 +40,7 @@ function App() {
               <Route path="/number/ethereum-unit-converter" element={<EthereumUnitConverter />} />
               <Route path="/number/big-number-calculator" element={ <BigNumberCalculator/> } />
 
+              <Route path="/dev/signature-recover" element={<SignatureRecover/>} />
               <Route path="/dev/ethereum-address-checksum" element={<EthereumAddressChecksum />} />
               <Route path="/dev/solidity-optimize-name" element={<SolidityOptimizeName />} />
               <Route path="/dev/ethereum-input-data-decoder" element={<EthereumInputDataDecoder />} />
