@@ -1,5 +1,14 @@
 export const ROUTES_BY_CATEGORY = [
   {
+    title: "Date",
+    routes: [
+      {
+        title: "Unix timestamp",
+        path: "/date/unix-timestamp",
+      }
+    ]
+  },
+  {
     title: "Number",
     routes: [
       {
@@ -40,15 +49,6 @@ export const ROUTES_BY_CATEGORY = [
         path: "/dev/solidity-optimize-name",
       },
     ],
-  },
-  {
-    title: "Date",
-    routes: [
-      {
-        title: "Unix timestamp",
-        path: "/date/unix-timestamp",
-      }
-    ]
   },
   {
     title: "Utils",
