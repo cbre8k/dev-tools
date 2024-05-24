@@ -1,0 +1,11 @@
+.date-result {
+  border: 1px #ccc solid;
+  padding: 20px;
+  width: 100%;
+}
+
+.label-result {
+  font-weight: 600;
+  width: 150px;
+  display: inline-block;
+}

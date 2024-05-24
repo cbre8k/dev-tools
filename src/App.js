@@ -10,6 +10,7 @@ import SideBar from './components/SideBar';
 
 import Home from "./page/Home";
 import Bitwise from "./page/Bitwise";
+import UnixTimestamp from "./page/UnixTimestamp";
 import SignatureRecover from "./page/SignatureRecover";
 import BigNumberCalculator from "./page/BigNumberCalculator";
 import SolidityOptimizeName from "./page/SolidityOptimizeName";
@@ -35,6 +36,8 @@ function App() {
           <Layout.Content className="content">
             <Routes>
               <Route path="/" element={<Home/>} />
+
+              <Route path="/date/unix-timestamp" element={<UnixTimestamp/>} />
               
               <Route path="/number/bitwise-calculator" element={<Bitwise />} />
               <Route path="/number/ethereum-unit-converter" element={<EthereumUnitConverter />} />

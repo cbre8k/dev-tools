@@ -42,6 +42,15 @@ export const ROUTES_BY_CATEGORY = [
     ],
   },
   {
+    title: "Date",
+    routes: [
+      {
+        title: "Unix timestamp",
+        path: "/date/unix-timestamp",
+      }
+    ]
+  },
+  {
     title: "Utils",
     routes: [
       {
