@@ -14,7 +14,7 @@ const UnixTimestamp = () => {
 
   const toGMT = (timestamp) => {
     const date = new Date(parseInt(timestamp) * 1000);
-    return date.toUTCString() + " +0000";
+    return timestamp !== "" ?  date.toUTCString() + " +0000" : date.toUTCString();
   }
 
   const toLocalTime = (timestamp) => {
@@ -59,18 +59,18 @@ const UnixTimestamp = () => {
     <Space direction="vertical" className="container">
       <h3>The Current Epoch Unix Timestamp</h3>
       <Row>
-        <Col span={12} gutter={8}>
+        <Col xs={24} md={12} gutter={8}>
           <Row gutter={[8, 8]}>
             <Col span={24}>
               <Typography.Text>Enter a timestamp</Typography.Text>
-              <Input value={timestamp} onChange={(e) => setTimestamp(e.target.value)} />
+              <Input placeholder={timestamp} onChange={(e) => setTimestamp(e.target.value)} />
             </Col>
             <Col span={24}>
               <Button onClick={handleTimestampConvert}>Convert</Button>
             </Col>
           </Row>
         </Col>
-        <Col span={12} style={{ textAlign: 'center' }}>
+        <Col xs={24} md={12} style={{ textAlign: 'center' }}>
           <Row gutter={[8, 8]}>
             <Col span={24}>
               <Typography.Title level={2}>{Math.floor(current.getTime() / 1000)}</Typography.Title>
@@ -103,7 +103,7 @@ const UnixTimestamp = () => {
       
       <Space direction="vertical">
         <Typography.Text>Select a Date & Time</Typography.Text>
-        <DatePicker showTime onChange={(_, dateString) => setDatetime(dateString)} />
+        <DatePicker showTime onChange={(_, dateString) => setDatetime(dateString)} style={{ width: "100%"}}/>
         <Button onClick={handleDatetimeConvert}>Convert</Button>
       </Space>
       {toggleDatetime && (
