@@ -4,6 +4,6 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.ant-input-group-addon {
-  width: 70px !important;
+.ant-input-number-group-addon {
+  min-width: 70px !important;
 }

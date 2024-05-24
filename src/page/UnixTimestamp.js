@@ -59,18 +59,18 @@ const UnixTimestamp = () => {
     <Space direction="vertical" className="container">
       <h3>The Current Epoch Unix Timestamp</h3>
       <Row>
-        <Col xs={24} md={12} gutter={8}>
+        <Col xs={24} md={8} gutter={8}>
           <Row gutter={[8, 8]}>
             <Col span={24}>
               <Typography.Text>Enter a timestamp</Typography.Text>
               <Input placeholder={timestamp} onChange={(e) => setTimestamp(e.target.value)} />
             </Col>
             <Col span={24}>
-              <Button onClick={handleTimestampConvert}>Convert</Button>
+              <Button onClick={handleTimestampConvert}>Convert →</Button>
             </Col>
           </Row>
         </Col>
-        <Col xs={24} md={12} style={{ textAlign: 'center' }}>
+        <Col xs={24} md={16} style={{ textAlign: 'center' }}>
           <Row gutter={[8, 8]}>
             <Col span={24}>
               <Typography.Title level={2}>{Math.floor(current.getTime() / 1000)}</Typography.Title>
@@ -104,7 +104,7 @@ const UnixTimestamp = () => {
       <Space direction="vertical">
         <Typography.Text>Select a Date & Time</Typography.Text>
         <DatePicker showTime onChange={(_, dateString) => setDatetime(dateString)} style={{ width: "100%"}}/>
-        <Button onClick={handleDatetimeConvert}>Convert</Button>
+        <Button onClick={handleDatetimeConvert}>Convert →</Button>
       </Space>
       {toggleDatetime && (
         <Space direction="vertical" className="date-result">
