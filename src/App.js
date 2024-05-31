@@ -49,7 +49,7 @@ function App() {
               <Route path="/dev/ethereum-input-data-decoder" element={<EthereumInputDataDecoder />} />
               <Route path="/dev/ethereum-function-extractor" element={<EthereumFunctionExtractor />} />
 
-              <Route path="/utils/multi-chain-balance-checker" element={<MultiChainBalanceChecker />} />
+              <Route path="/misc/multi-chain-balance-checker" element={<MultiChainBalanceChecker />} />
             </Routes>
           </Layout.Content>
         </Layout>

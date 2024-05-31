@@ -51,11 +51,11 @@ export const ROUTES_BY_CATEGORY = [
     ],
   },
   {
-    title: "Utils",
+    title: "Misc",
     routes: [
       {
         title: "Multi-chain Balance Checker",
-        path: "/utils/multi-chain-balance-checker",
+        path: "/misc/multi-chain-balance-checker",
       },
     ],
   },
