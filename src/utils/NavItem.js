@@ -59,4 +59,13 @@ export const ROUTES_BY_CATEGORY = [
       },
     ],
   },
+  {
+    title: "Dos",
+    routes: [
+      {
+        title: "Dos Pixel",
+        path: "/dos/dos-pixel",
+      }
+    ]
+  }
 ];

@@ -19,6 +19,7 @@ import EthereumAddressChecksum from "./page/EthereumAddressChecksum";
 import EthereumInputDataDecoder from "./page/EthereumInputDataDecoder";
 import EthereumFunctionExtractor from "./page/EthereumFunctionExtractor";
 import MultiChainBalanceChecker from "./page/MultiChainBalanceChecker";
+import Dos from "./page/Dos";
 
 function App() {
   return (
@@ -50,6 +51,8 @@ function App() {
               <Route path="/dev/ethereum-function-extractor" element={<EthereumFunctionExtractor />} />
 
               <Route path="/misc/multi-chain-balance-checker" element={<MultiChainBalanceChecker />} />
+            
+              <Route path="dos/dos-pixel" element={<Dos/>} />
             </Routes>
           </Layout.Content>
         </Layout>
